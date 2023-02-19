@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cop-sample-app
+    app.kubernetes.io/component: cop-sample-app
+    app.kubernetes.io/instance: cop-sample-app
+  name: cop-sample-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: cop-sample-app
+  template:
+    metadata:
+      labels:
+        deployment: cop-sample-app
+    spec:
+      containers:
+      - image: patch-me
+        name: cop-sample-app
+

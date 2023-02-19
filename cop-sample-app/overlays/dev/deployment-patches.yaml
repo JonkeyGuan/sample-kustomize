@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cop-sample-app
+spec:
+  template:
+    spec:
+      containers:
+      - name: cop-sample-app
+        image: image-registry.openshift-image-registry.svc:5000/cop-dev/my-app-image:d8045db

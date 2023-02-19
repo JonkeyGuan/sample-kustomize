@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: cop-sample-app
+    app.kubernetes.io/component: cop-sample-app
+    app.kubernetes.io/instance: cop-sample-app
+  name: cop-sample-app
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: cop-sample-app
