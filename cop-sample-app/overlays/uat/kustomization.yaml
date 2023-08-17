@@ -5,5 +5,5 @@ kind: Kustomization
 bases:
 - ../../base
 
-patches:
+patchesstrategicmerge:
 - ./deployment-patches.yaml
